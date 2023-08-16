@@ -13,6 +13,12 @@ const userSchema = new Schema({
         type: String,
         required: true,
         trim: true,
+        validate: {
+            validator: function (value) {
+                return /\S+@\S+\.\S+/.test(value);
+            },
+            message: props => `${props.value} is not a valid email address!`,
+        },
     },
     password: {
         type: String,
@@ -21,13 +27,20 @@ const userSchema = new Schema({
     },
     address: {
         type: String,
-        required: true,
         trim: true,
     },
     phone: {
         type: String,
-        required: true,
         trim: true,
+        validate: {
+            validator: function (value) {
+                return /^[0-9]{10}$/.test(value);
+            },
+            message: props => `${props.value} is not a valid phone number!`,
+        },
+    },
+    messages: {
+        type: String,
     },
     apptInfo:
     {
