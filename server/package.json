@@ -1,5 +1,5 @@
 {
-    "name": "sql-server",
+    "name": "apollo-server",
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
@@ -12,13 +12,13 @@
     "author": "",
     "license": "MIT",
     "dependencies": {
-        "bcrypt": "^5.1.0",
-        "dotenv": "^16.3.1",
-        "express": "^4.17.2",
-        "mysql2": "^3.6.0",
-        "sequelize": "^6.32.1"
+        "apollo-server-express": "^3.12.0",
+        "bcrypt": "^5.1.1",
+        "graphql": "^16.8.0",
+        "jsonwebtoken": "^9.0.1",
+        "mongoose": "^7.4.3"
     },
     "devDependencies": {
-        "nodemon": "^2.0.3"
+        "nodemon": "^3.0.1"
     }
 }
