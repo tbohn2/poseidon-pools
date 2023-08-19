@@ -34,6 +34,12 @@ const resolvers = {
             const token = signToken(admin);
             return { token, admin };
         },
+        deleteUser: async (parent, { userId }) => {
+            return User.findOneAndDelete({ _id: userId });
+        },
+        deleteAdmin: async (parent, { adminId }) => {
+            return Admin.findOneAndDelete({ _id: adminId });
+        },
         userLogin: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
             if (!user) {
