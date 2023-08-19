@@ -39,9 +39,12 @@ const userSchema = new Schema({
             message: props => `${props.value} is not a valid phone number!`,
         },
     },
-    messages: {
-        type: String,
-    },
+    messagesFromUser: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Message'
+        }
+    ],
     apptInfo:
     {
         type: Schema.Types.ObjectId,
