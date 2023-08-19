@@ -4,6 +4,7 @@ const typeDefs = gql`
     type User {
         _id: ID!
         name: String!
+        email: String!
         address: String
         phone: String
         messagesFromUser: [Message]
@@ -44,7 +45,6 @@ const typeDefs = gql`
         user(_id: ID!): User
         admins: [Admin]
         admin(_id: ID!): Admin
-        appts(_id: ID!): [Appt]
     }
 
     type Mutation {
