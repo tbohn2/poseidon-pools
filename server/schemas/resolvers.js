@@ -88,6 +88,41 @@ const resolvers = {
                 { $set: { admin: adminId }, },
                 { new: true, runValidators: true, }
             );
-        }
+        },
+        updateAppt: async (parent, { apptId, type, time }) => {
+            return Appt.findOneAndUpdate(
+                { _id: apptId },
+                { $set: { type, time }, },
+                { new: true, runValidators: true, }
+            );
+        },
+        markMessageAsRead: async (parent, { userId, messageId }) => {
+            const readMessage = await Message.findOneAndUpdate(
+                { _id: messageId },
+                { $set: { read: true }, },
+                { new: true, runValidators: true, }
+            );
+            return User.findOneAndUpdate(
+                { _id: userId },
+                { $pull: { messagesFromUser: messageId }, $set: { messagesFromUser: readMessage }, },
+                { new: true, runValidators: true, }
+            );
+        },
+        deleteMessage: async (parent, { userId, messageId }) => {
+            const removedMessage = await Message.findOneAndDelete({ _id: messageId },);
+            return User.findOneAndUpdate(
+                { _id: userId },
+                { $pull: { messagesFromUser: removedMessage }, },
+                { new: true, runValidators: true, }
+            );
+        },
+        deleteAppt: async (parent, { userId, apptId }) => {
+            const removedAppt = await Appt.findOneAndDelete({ _id: apptId },);
+            return User.findOneAndUpdate(
+                { _id: userId },
+                { $pull: { apptInfo: removedAppt }, },
+                { new: true, runValidators: true, }
+            );
+        },
     }
 };

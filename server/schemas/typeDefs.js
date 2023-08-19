@@ -57,7 +57,7 @@ const typeDefs = gql`
         respondMessage(userId: ID!, text: String!): Message
         addAppt(userId: ID!, type: String!, time: String!): Appt
         assignAdmin(apptId: ID!, adminId: ID): Appt
-        updateAppt(userId: ID!, apptId: ID!, type: String, time: String): Appt
+        updateAppt(apptId: ID!, type: String, time: String): Appt
         markMessageAsRead(userId: ID!, messageId: ID!): Message
         deleteAppt(userId: ID!, apptId: ID!): User
         deleteMessage(userId: ID!, messageId: ID!): User
