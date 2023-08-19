@@ -5,9 +5,10 @@ const typeDefs = gql`
         _id: ID!
         name: String!
         email: String!
-        address: String
-        phone: String
+        address: String!
+        phone: String!
         messagesFromUser: [Message]
+        messagesToUser: [Message]
         apptInfo: Appt
     }
 
@@ -48,13 +49,14 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        addUser(name: String!, email: String!, password: String!): Auth
-        addAdmin(name: String!, password: String!): adminAuth
+        addUser(name: String!, email: String!, password: String!, address: String!, phone: String!): Auth
+        addAdmin(username: String!, password: String!): adminAuth
         userLogin(email: String!, password: String!): Auth
         adminLogin(name: String!, password: String!): adminAuth
         addMessage(userId: ID!, text: String!): Message
+        respondMessage(userId: ID!, text: String!): Message
         addAppt(userId: ID!, type: String!, time: String!): Appt
-        assignAdmin(userId: ID!, apptId: ID!, adminId: ID): Appt
+        assignAdmin(apptId: ID!, adminId: ID): Appt
         updateAppt(userId: ID!, apptId: ID!, type: String, time: String): Appt
         markMessageAsRead(userId: ID!, messageId: ID!): Message
         deleteAppt(userId: ID!, apptId: ID!): User
