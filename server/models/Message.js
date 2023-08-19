@@ -15,6 +15,7 @@ const messageSchema = new Schema({
     read: {
         type: Boolean,
         required: true,
+        default: false,
     }
 });
 
