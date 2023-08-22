@@ -7,13 +7,13 @@ const resolvers = {
         users: async () => {
             return User.find().populate('messagesFromUser').populate('apptInfo').populate({
                 path: 'apptInfo',
-                populate: { path: 'admin' }
+                populate: { path: 'servicer' }
             });;
         },
         user: async (parent, { _id }) => {
             return User.findOne({ _id }).populate('messagesFromUser').populate('apptInfo').populate({
                 path: 'apptInfo',
-                populate: { path: 'admin' }
+                populate: { path: 'servicer' }
             });
         },
         admins: async () => {
@@ -22,6 +22,12 @@ const resolvers = {
         admin: async (parent, { _id }) => {
             return Admin.findOne({ _id });
         },
+        messages: async () => {
+            return Message.find();
+        },
+        appts: async () => {
+            return Appt.find().populate('servicer');
+        }
     },
     Mutation: {
         addUser: async (parent, { name, email, password, address, phone }) => {
@@ -29,8 +35,8 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        addAdmin: async (parent, { username, password }) => {
-            const admin = await Admin.create({ username, password });
+        addAdmin: async (parent, { name, username, password }) => {
+            const admin = await Admin.create({ name, username, password });
             const token = signToken(admin);
             return { token, admin };
         },
@@ -91,7 +97,7 @@ const resolvers = {
         assignAdmin: async (parent, { apptId, adminId }) => {
             return Appt.findOneAndUpdate(
                 { _id: apptId },
-                { $set: { admin: adminId }, },
+                { $set: { servicer: adminId }, },
                 { new: true, runValidators: true, }
             );
         },
