@@ -45,12 +45,12 @@ const userSchema = new Schema({
             ref: 'Message'
         }
     ],
-    apptInfo:
-    {
-        type: Schema.Types.ObjectId,
-        ref: 'Appt',
-    },
-
+    apptInfo: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Appt',
+        }
+    ]
 });
 
 userSchema.pre('save', async function (next) {

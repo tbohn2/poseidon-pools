@@ -9,7 +9,7 @@ const typeDefs = gql`
         phone: String!
         messagesFromUser: [Message]
         messagesToUser: [Message]
-        apptInfo: Appt
+        apptInfo: [Appt]
     }
 
     type Admin {
@@ -46,21 +46,23 @@ const typeDefs = gql`
         user(_id: ID!): User
         admins: [Admin]
         admin(_id: ID!): Admin
+        messages: [Message]
+        appts: [Appt]
     }
 
     type Mutation {
         addUser(name: String!, email: String!, password: String!, address: String!, phone: String!): Auth
-        deleteUser(userId: ID!): User
-        addAdmin(username: String!, password: String!): adminAuth
-        deleteAdmin(adminId: ID!): Admin
+        addAdmin(name: String!, username: String!, password: String!): adminAuth
+        addAppt(userId: ID!, type: String!, time: String!): User
+        addMessage(userId: ID!, text: String!): Message
         userLogin(email: String!, password: String!): Auth
         adminLogin(name: String!, password: String!): adminAuth
-        addMessage(userId: ID!, text: String!): Message
         respondMessage(userId: ID!, text: String!): Message
-        addAppt(userId: ID!, type: String!, time: String!): Appt
-        assignAdmin(apptId: ID!, adminId: ID): Appt
+        assignAdmin(apptId: ID!, adminId: ID!): Appt
         updateAppt(apptId: ID!, type: String, time: String): Appt
         markMessageAsRead(userId: ID!, messageId: ID!): Message
+        deleteUser(userId: ID!): User
+        deleteAdmin(adminId: ID!): Admin
         deleteAppt(userId: ID!, apptId: ID!): User
         deleteMessage(userId: ID!, messageId: ID!): User
        }
