@@ -1,0 +1,10 @@
+:root {
+    --blue: #07aed8;
+    --dark: #004f63;
+
+}
+
+.app {
+    background-color: var(--dark);
+    min-height: 100vh;
+}
