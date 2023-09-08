@@ -1,8 +1,22 @@
-.myHeader {
-    font-style: italic;
-}
-
 .myLogo {
     width: 400px;
+}
 
+.myNavBtn {
+    background-image: linear-gradient(to top, var(--blue), var(--light));
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    border: 1px solid var(--blue);
+}
+
+.myNavBtn:hover {
+    background-image: linear-gradient(to top, var(--light), var(--blue));
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.myNavBtn,
+.myNavBtn:hover {
+    transition: 0.2s ease-in-out;
 }
