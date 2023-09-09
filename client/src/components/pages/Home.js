@@ -7,14 +7,14 @@ const Home = () => {
     return (
         <div className='d-flex flex-column align-items-center'>
             <div className='firstCard col-12 d-flex' style={{ backgroundImage: `url(${poolFloat})` }}>
-                <p className='fs-3 m-5 col-5'>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam odit quia nesciunt exercitationem, doloribus maxime architecto. Quidem unde odio nam beatae quod reprehenderit natus fuga similique officiis, tempore incidunt placeat.
-
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam odit quia nesciunt exercitationem, doloribus maxime architecto. Quidem unde odio nam beatae quod reprehenderit natus fuga similique officiis, tempore incidunt placeat.
-
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam odit quia nesciunt exercitationem, doloribus maxime architecto. Quidem unde odio nam beatae quod reprehenderit natus fuga similique officiis, tempore incidunt placeat.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam odit quia nesciunt exercitationem, doloribus maxime architecto. Quidem unde odio nam beatae quod reprehenderit natus fuga similique officiis, tempore incidunt placeat.
-                </p>
+                <div className='col-1'></div>
+                <div className='relaxCard d-flex flex-column my-5 align-items-center col-4'>
+                    <h1 className='relaxHeading'>RELAX! WE GOT THIS!</h1>
+                    <p className='fs-3 my-5 col-11'>
+                        Swimming pool maintenance is a chore. Let us take care of it for you! We offer a variety of services to keep your pool clean and safe for your
+                        family and friends. We offer weekly services, one time cleanings for special events, and pool repair services.
+                        Our quality care is unrivaled, and the first visit if completely free!</p>
+                </div>
             </div>
 
         </div>

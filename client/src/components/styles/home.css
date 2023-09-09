@@ -2,3 +2,19 @@
     background-size: cover;
     background-position: center;
 }
+
+.relaxCard {
+    background-image: linear-gradient(to top, var(--light), var(--blue));
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: navy;
+    border: 1px solid var(--blue);
+    border-radius: 25px;
+}
+
+.relaxHeading {
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: oblique;
+    color: navy
+}
