@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import poolBG from '../assets/poolBG.jpg'
 import poolFloat from '../assets/poolFloat.jpg'
 import '../styles/home.css'
@@ -13,7 +14,9 @@ const Home = () => {
                     <p className='fs-3 my-5 col-11'>
                         Swimming pool maintenance is a chore. Let us take care of it for you! We offer a variety of services to keep your pool clean and safe for your
                         family and friends. We offer weekly services, one time cleanings for special events, and pool repair services.
-                        Our quality care is unrivaled, and the first visit if completely free!</p>
+                        Our quality care is unrivaled, and the first visit is completely free!
+                    </p>
+                    <Link className='btn btn-lg mb-3 fs-3 fw-semibold bookBtn' to='/book'>Book Free Consult!</Link>
                 </div>
             </div>
 

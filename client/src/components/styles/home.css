@@ -18,3 +18,9 @@
     font-style: oblique;
     color: navy
 }
+
+.bookBtn.btn {
+    background-color: var(--blue);
+    color: navy;
+    border: 1px solid navy;
+}
