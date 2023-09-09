@@ -2,12 +2,11 @@
     width: 400px;
 }
 
-.myNavBtn {
+.myNavBtn.btn {
     background-image: linear-gradient(to top, var(--blue), var(--light));
     background-repeat: no-repeat;
     background-size: cover;
-    color: black;
-    border: 1px solid var(--blue);
+    color: navy;
 }
 
 .myNavBtn:hover {
