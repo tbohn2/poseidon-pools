@@ -1,26 +1,32 @@
 .firstCard {
     background-size: cover;
     background-position: center;
+    height: 80vh;
 }
 
 .relaxCard {
-    background-image: linear-gradient(to top, var(--light), var(--blue));
+    background-image: linear-gradient(to bottom, white, var(--light));
     background-repeat: no-repeat;
     background-size: cover;
-    color: navy;
-    border: 1px solid var(--blue);
-    border-radius: 25px;
+    color: black;
+    border-radius: 15px;
 }
 
 .relaxHeading {
     font-size: 3rem;
     font-weight: 700;
     font-style: oblique;
-    color: navy
+    color: black
 }
 
 .bookBtn.btn {
-    background-color: var(--blue);
+    background-color: rgb(212, 240, 248);
+    color: black;
+    border: 1px solid navy;
+}
+
+.bookBtn.btn:hover {
+    background-image: linear-gradient(to top, var(--blue), var(--light));
     color: navy;
     border: 1px solid navy;
 }
