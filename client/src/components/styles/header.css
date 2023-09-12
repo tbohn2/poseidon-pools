@@ -1,3 +1,7 @@
+.myHeader {
+    height: 20vh;
+}
+
 .myLogo {
     width: 400px;
 }
@@ -9,10 +13,11 @@
     color: navy;
 }
 
-.myNavBtn:hover {
+.myNavBtn.btn:hover {
     background-image: linear-gradient(to top, var(--light), var(--blue));
     background-repeat: no-repeat;
     background-size: cover;
+    border: 1px solid navy;
 }
 
 .myNavBtn,
