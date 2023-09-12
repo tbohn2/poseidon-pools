@@ -28,7 +28,7 @@ const Home = () => {
                 <Link className='btn btn-lg mb-3 fs-3 fw-semibold bookBtn' to='/book'>Book Free Consult!</Link>
             </div>
             <div id='ourTeam' className='col-12 d-flex flex-column' style={{ backgroundImage: `url(${poolBG})` }}>
-                <h1 className='col-12 text-center mt-5 fs-1 fw-bold'>Meet Our Team</h1>
+                <h1 className='col-12 text-center py-5 fs-1 fw-bold'>Meet Our Team</h1>
                 <div className='col-12 d-flex justify-content-evenly'>
                     <div className='d-flex flex-column col-3 align-items-center'>
                         <div className='border border-dark teamPic'></div>
