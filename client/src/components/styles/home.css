@@ -30,3 +30,10 @@
     color: navy;
     border: 1px solid navy;
 }
+
+.teamPic {
+    background-color: var(--light);
+    border-radius: 15px;
+    height: 400px;
+    width: 350px;
+}

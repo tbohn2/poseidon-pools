@@ -27,6 +27,29 @@ const Home = () => {
                 </p>
                 <Link className='btn btn-lg mb-3 fs-3 fw-semibold bookBtn' to='/book'>Book Free Consult!</Link>
             </div>
+            <div id='ourTeam' className='col-12 d-flex flex-column' style={{ backgroundImage: `url(${poolBG})` }}>
+                <h1 className='col-12 text-center mt-5 fs-1 fw-bold'>Meet Our Team</h1>
+                <div className='col-12 d-flex justify-content-evenly'>
+                    <div className='d-flex flex-column col-3 align-items-center'>
+                        <div className='border border-dark teamPic'></div>
+                        <h2 className='fs-2 fw-bold'>John Doe</h2>
+                        <p>John is the CEO and founder of Poseidon Pools AZ. His 25 years of experience with pools has shown him that the client's needs must always come first.
+                        </p>
+                    </div>
+                    <div className='d-flex flex-column col-3 align-items-center'>
+                        <div className='border border-dark teamPic'></div>
+                        <h2 className='fs-2 fw-bold'>John Doe</h2>
+                        <p>John is the CEO and founder of Poseidon Pools AZ. His 25 years of experience with pools has shown him that the client's needs must always come first.
+                        </p>
+                    </div>
+                    <div className='d-flex flex-column col-3 align-items-center'>
+                        <div className='border border-dark teamPic'></div>
+                        <h2 className='fs-2 fw-bold'>John Doe</h2>
+                        <p>John is the CEO and founder of Poseidon Pools AZ. His 25 years of experience with pools has shown him that the client's needs must always come first.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
