@@ -7,7 +7,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { Home } from './components/pages';
+import { Home, Login } from './components/pages';
 import Header from './components/Header'
 import Footer from './components/Footer';
 import './App.css'
@@ -43,6 +43,7 @@ function App() {
           <div className=''>
             <Routes>
               <Route exact path='/' element={<Home />} />
+              <Route exact path='/login' element={<Login />} />
             </Routes>
           </div>
           <Footer />
